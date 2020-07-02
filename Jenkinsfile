@@ -34,7 +34,6 @@ pipeline {
       steps {
         script {
           sh """
-              cd basic-nginx
               mkdir build
               cp index.html build/index.html
               cp nginx.conf build/nginx.conf
