@@ -9,7 +9,7 @@ retriever: modernSCM(
 
 openshift.withCluster() {
   env.APP_NAME = "${JOB_NAME}".replaceAll(/-build.*/, '')
-  env.ARTIFACT_DIRECTORY = "basic-nginx/build"
+  env.ARTIFACT_DIRECTORY = "build"
   env.BUILD = openshift.project()
   env.DEV = "${APP_NAME}-dev"
   env.STAGE = "${APP_NAME}-stage"
