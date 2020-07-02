@@ -26,7 +26,7 @@ pipeline {
     
     stage('Git Checkout') {
       steps {
-        git url: "https://github.com/redhat-cop/pipeline-library.git", branch: "master"
+        git url: "https://github.com/waynedovey/nginx-demo.git", branch: "master"
       }
     }
 
