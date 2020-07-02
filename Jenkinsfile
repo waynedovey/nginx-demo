@@ -26,7 +26,7 @@ pipeline {
     
     stage('Git Checkout') {
       steps {
-        git url: "${SOURCE_REPOSITORY_URL}", branch: "${SOURCE_REPOSITORY_REF}"
+        git url: "https://github.com/redhat-cop/pipeline-library.git", branch: "master"
       }
     }
 
