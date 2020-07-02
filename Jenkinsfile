@@ -8,8 +8,7 @@ retriever: modernSCM(
 
 
 openshift.withCluster() {
-  //env.APP_NAME = "${JOB_NAME}".replaceAll(/-build.*/, '')
-  env.APP_NAME = "${JOB_NAME}"	
+  env.APP_NAME = "nginx-demo"
   env.ARTIFACT_DIRECTORY = "build"
   env.BUILD = openshift.project()
   env.DEV = "${APP_NAME}-dev"
