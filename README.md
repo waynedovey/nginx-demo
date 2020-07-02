@@ -14,10 +14,10 @@ This quickstart can be deployed quickly using Ansible. Here are the steps.
 
 1. Clone [this repo](https://github.com/redhat-cop/container-pipelines)
 2. `cd container-pipelines/basic-nginx`
-3. Run `ansible-galaxy install -r requirements.yml --roles-path=galaxy`
+3. Run `oc new-project nginx-demo`
 4. Log into an OpenShift cluster, then run the following command.
 ```
-$ ansible-playbook -i ./.applier/ galaxy/openshift-applier/playbooks/openshift-cluster-seed.yml
+$ oc new-app --template=jenkins-persistent .
 ```
 
 At this point you should have 4 projects created (`basic-nginx-build`, `basic-nginx-dev`, `basic-nginx-stage`, and `basic-nginx-prod`) with a pipeline in the `-build` project, and our [Nginx](../basic-nginx) demo app deployed to the dev/stage/prod projects.
